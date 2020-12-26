@@ -1,0 +1,14 @@
+﻿.chart_scroll {
+    width: 700px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.navbar-inverse {
+    color: #FFFFFF;
+    background-color: #292929;
+}
+
+.navbar-inverse:hover {
+    color: #C7C7C7;
+}

@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication.Views.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <link href="../Styles/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand navbar-inverse" href="Default.aspx">HOME</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="PopulationStatistics.aspx" class="navbar-brand navbar-inverse">Show Statistics</a></li>
+                </ul>
+                <ul id="ulLoginInfo" class="nav navbar-nav navbar-right" runat="server" visible="false">
+                    <li><a href="AddNewUser.aspx" class="navbar-brand navbar-inverse">Register</a></li>
+                    <li><a href="Login.aspx" class="navbar-brand navbar-inverse">Login</a></li>
+                </ul>
+                <ul id="ulUserInfo" runat="server" visible="false" />
+            </div>
+        </nav>
+        <br />
+        <div id="divError" class="alert alert-danger alert-dismissible" runat="server" role="alert" visible="false">
+            <asp:Label ID="LabelError" runat="server" ForeColor="Red" Text="ERROR"></asp:Label>
+        </div>
+        <div id="divSuccess" class="alert alert-success alert-dismissible" runat="server" role="alert" visible="false">
+            <asp:Label ID="LabelSuccess" runat="server" ForeColor="Green" Text="SUCCESS"></asp:Label>
+        </div>
+        <br />
+        <br />
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>
